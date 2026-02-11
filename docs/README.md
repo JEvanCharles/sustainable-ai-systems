@@ -1,0 +1,1 @@
+Design notes, research references, and system architecture documentation.

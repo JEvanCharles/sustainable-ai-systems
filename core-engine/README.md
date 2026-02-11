@@ -1,0 +1,1 @@
+Core energy simulation logic for AI compute modeling.
