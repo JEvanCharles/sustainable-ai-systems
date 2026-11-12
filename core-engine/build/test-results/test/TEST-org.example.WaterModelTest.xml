@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.WaterModelTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-12T21:56:29.902Z" hostname="DESKTOP-E3JGSNM" time="0.02">
+  <properties/>
+  <testcase name="negative energy should be rejected()" classname="org.example.WaterModelTest" time="0.003"/>
+  <testcase name="facility energy should include PUE()" classname="org.example.WaterModelTest" time="0.002"/>
+  <testcase name="indirect water consumption should be calculated correctly()" classname="org.example.WaterModelTest" time="0.001"/>
+  <testcase name="direct water consumption should be calculated correctly()" classname="org.example.WaterModelTest" time="0.004"/>
+  <testcase name="total operational water should equal direct plus indirect()" classname="org.example.WaterModelTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

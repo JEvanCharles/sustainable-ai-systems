@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.EnergyModelTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-12T21:56:29.665Z" hostname="DESKTOP-E3JGSNM" time="0.052">
+  <properties/>
+  <testcase name="energy consumption should equal hours times energy rate()" classname="org.example.EnergyModelTest" time="0.041"/>
+  <testcase name="carbon emissions should be calculated correctly()" classname="org.example.EnergyModelTest" time="0.002"/>
+  <testcase name="electricity cost should be calculated correctly()" classname="org.example.EnergyModelTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

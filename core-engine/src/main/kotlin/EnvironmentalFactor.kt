@@ -1,4 +1,3 @@
-
 package org.example
 
 data class EnvironmentalFactor(
@@ -7,7 +6,9 @@ data class EnvironmentalFactor(
     val unit: String,
     val source: String,
     val region: String,
-    val referenceYear: Int
+    val referenceYear: Int,
+    val type: EnvironmentalFactorType =
+        EnvironmentalFactorType.ELECTRICITY_CARBON_INTENSITY
 ) {
     init {
         require(name.isNotBlank()) {
@@ -20,6 +21,10 @@ data class EnvironmentalFactor(
 
         require(unit.isNotBlank()) {
             "Factor unit cannot be empty."
+        }
+
+        require(unit == type.expectedUnit) {
+            "Incorrect unit for $type. Expected ${type.expectedUnit}, got $unit."
         }
 
         require(source.isNotBlank()) {
@@ -35,3 +40,5 @@ data class EnvironmentalFactor(
         }
     }
 }
+
+

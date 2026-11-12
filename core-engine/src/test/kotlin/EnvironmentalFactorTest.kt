@@ -81,4 +81,48 @@ class EnvironmentalFactorTest {
             )
         }
     }
+    @Test
+    fun `correct carbon intensity unit should be accepted`() {
+        val factor = EnvironmentalFactor(
+            name = "Electricity Carbon Intensity",
+            value = 0.4,
+            unit = "kg CO2e/kWh",
+            source = "Illustrative Example",
+            region = "Example Region",
+            referenceYear = 2025,
+            type = EnvironmentalFactorType.ELECTRICITY_CARBON_INTENSITY
+        )
+
+        assertEquals("kg CO2e/kWh", factor.unit)
+    }
+
+    @Test
+    fun `incorrect carbon intensity unit should be rejected`() {
+        assertFailsWith<IllegalArgumentException> {
+            EnvironmentalFactor(
+                name = "Electricity Carbon Intensity",
+                value = 400.0,
+                unit = "g CO2e/kWh",
+                source = "Illustrative Example",
+                region = "Example Region",
+                referenceYear = 2025,
+                type = EnvironmentalFactorType.ELECTRICITY_CARBON_INTENSITY
+            )
+        }
+    }
+
+    @Test
+    fun `electricity water factor should accept liters per kilowatt hour`() {
+        val factor = EnvironmentalFactor(
+            name = "Electricity Water Consumption",
+            value = 1.0,
+            unit = "L/kWh",
+            source = "Illustrative Example",
+            region = "Example Region",
+            referenceYear = 2025,
+            type = EnvironmentalFactorType.ELECTRICITY_WATER_CONSUMPTION
+        )
+
+        assertEquals("L/kWh", factor.unit)
+    }
 }
