@@ -1,6 +1,8 @@
 plugins {
     kotlin("jvm") version "2.2.21"
+    application
 }
+
 
 group = "org.example"
 version = "1.0-SNAPSHOT"
@@ -19,4 +21,8 @@ kotlin {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+application {
+    mainClass.set("org.example.MainKt")
 }
